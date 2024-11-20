@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #aaa;
+    margin: 0;
+}
+
+header, footer{
+    background-color: #333;
+    height: 100px;
+}
+
+footer{
+    height: 400px;
+}
+
+main{
+    min-height: 500px;
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+form{
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 80%;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: inherit;
+}
+
+input[type=text]{
+    display: block;
+}
+
+#comment{
+    width: 400px;
+    aspect-ratio: 16/9;
+    resize: none;
+}
