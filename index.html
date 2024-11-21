@@ -13,26 +13,68 @@
     <main>
         <h1>Sign Up Form</h1>
         <form>
-            <input type="text" name="firstName" id="firstName" placeholder="First Name"/>
-            <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
-            <input type="email" name="email" id="email" placeholder="email Address" />
-            <input type="tel" name="telephone" id="telephone" placeholder="999-999-9999" maxlength="15" minlength="15" />
-            <input type="date" name="birthday" id="birthday" />
-            <input type="color" name="favColor" id="favColor" />
-            <input type="range" name="range" id="range" />
-            <textarea name="comment" id="comment">Add your content here.</textarea>
-            
-            <input type="radio" name="meetingDay" class="meetingDay" value="Monday" />
-            <input type="radio" name="meetingDay" class="meetingDay" value="Tuesday" />
-            <input type="radio" name="meetingDay" class="meetingDay" value="Wednesday" />
-            <input type="radio" name="meetingDay" class="meetingDay" value="Thursday" />
-            <input type="radio" name="meetingDay" class="meetingDay" value="Friday" />
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="firstName" >First Name: </label>
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{2, 63}" placeholder="First Name"/>
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" id="lastName"pattern="[A-Za-z]{2, 63}"  placeholder="Last Name" />
+                <label for="email">Email Address: </label>
+                <input type="email" name="email" id="email" pattern="[a-zA-Z0-9.+-_]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}" placeholder="email Address" />
+                <label for="telephone">Phone Number: </label>
+                <input type="tel" name="telephone" id="telephone" placeholder="999-999-9999" pattern="\d{3}-\d{3}-\d{4}" maxlength="15" minlength="15" />
+                <input type="date" name="birthday" id="birthday" />
+                <input type="color" name="favColor" id="favColor" />
+                <input type="range" name="range" id="range" />
+            </fieldset>
 
-            <input type="checkbox" name="multiMeeting" class="multiMeeting" value="Monday" />
-            <input type="checkbox" name="multiMeeting" class="multiMeeting" value="Tuesday" />
-            <input type="checkbox" name="multiMeeting" class="multiMeeting" value="Wednesday" />
-            <input type="checkbox" name="multiMeeting" class="multiMeeting" value="Thursday" />
-            <input type="checkbox" name="multiMeeting" class="multiMeeting" value="Friday" />
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea name="comment" id="comment">Add your content here.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Meeting Day</legend>
+            
+                <label for="dayM">Monday: </label>
+                <input type="radio" name="meetingDay" class="meetingDay" id="dayM" value="Monday" checked/>
+                <label for="dayT">Tuesday: </label>
+                <input type="radio" name="meetingDay" class="meetingDay" id="dayT" value="Tuesday" />
+                <label for="dayW">Wednesay: </label>
+                <input type="radio" name="meetingDay" class="meetingDay" id="dayW" value="Wednesday" />
+                <label for="dayR">Thursday: </label>
+                <input type="radio" name="meetingDay" class="meetingDay" id="dayR" value="Thursday" />
+                <label for="dayF">Friday: </label>
+                <input type="radio" name="meetingDay" class="meetingDay" id="dayF" value="Friday" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Other Meeting Days</legend>
+                <label for="multiM">Monday</label>
+                <input type="checkbox" name="multiMeeting" class="multiMeeting" id="multiM" value="Monday" />
+                <label for="multiT">Tuesday</label>
+                <input type="checkbox" name="multiMeeting" class="multiMeeting" id="multiT" value="Tuesday" />
+                <label for="multiW">Wednesday</label>
+                <input type="checkbox" name="multiMeeting" class="multiMeeting" id="multiW" value="Wednesday" />
+                <label for="multiR">Thursday</label>
+                <input type="checkbox" name="multiMeeting" class="multiMeeting" id="multiR" value="Thursday" />
+                <label for="multiF">Friday</label>
+                <input type="checkbox" name="multiMeeting" class="multiMeeting" id="multiF" value="Friday" />
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferred Room(s)</legend>
+            <select name="rooms" id="rooms" multiple>
+                <option value="100">100</option>
+                <option value="101">101</option>
+                <option value="102" selected>102</option>
+                <option value="103">103</option>
+                <option value="104">104</option>
+            </select>
+            </fieldset>
+            <!--<input type="submit" name="submit" id="submit" value="Send Request" />-->
+            <button name="submit" id="submit">Send Request</button>
+
         </form>
     </main>
     <footer>
